@@ -32,8 +32,8 @@ const ehInteiro = (valor) => {
 const exibeLista = () => {
     let texto = "";
 
-    const mensagem = (texto) => {
-        obterElementos("lista").textContent = texto;
+    const mensagem = (valor) => {
+        obterElementos("lista").textContent = valor;
     }
 
     for(let i = 0; i < lista.length; i++){
