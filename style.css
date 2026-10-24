@@ -1,0 +1,221 @@
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+:root {
+    --fundo: #eef2f7;
+    --card: #ffffff;
+    --primaria: #2563eb;
+    --primaria-hover: #1d4ed8;
+    --texto: #1e293b;
+    --texto-secundario: #64748b;
+    --borda: #dbe3ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+}
+
+/* ==============================
+   PAINEL PRINCIPAL
+============================== */
+
+main {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ==============================
+   CAMPO DE ENTRADA
+============================== */
+
+#adiciona-numeros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#numero {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 20px;
+    border: 1px solid var(--borda);
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#numero:focus {
+    border-color: var(--primaria);
+}
+
+/* ==============================
+   BOTÕES
+============================== */
+
+button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#adicionar,
+#analisador {
+    background-color: var(--primaria);
+    color: white;
+}
+
+#adicionar:hover,
+#analisador:hover {
+    background-color: var(--primaria-hover);
+}
+
+#limpar {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+#limpar:hover {
+    background-color: #fecaca;
+}
+
+/* ==============================
+   NÚMEROS ADICIONADOS
+============================== */
+
+#numeros-adicionados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#numeros-adicionados > p:first-child {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--texto-secundario);
+}
+
+#lista {
+    width: 100%;
+    min-height: 75px;
+    padding: 20px;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    color: #1d4ed8;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    word-spacing: 20px;
+    overflow-wrap: anywhere;
+}
+
+#analisador {
+    flex: 1;
+}
+
+/* ==============================
+   RESULTADOS DA ANÁLISE
+============================== */
+
+#analise {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+    border-top: 1px solid var(--borda);
+    padding-top: 30px;
+}
+
+#analise p {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--primaria);
+    border-radius: 8px;
+    padding: 22px 18px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--texto);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    #adiciona-numeros {
+        flex-direction: column;
+    }
+
+    #adicionar,
+    #analisador,
+    #limpar {
+        width: 100%;
+    }
+
+    #analise {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
