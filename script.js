@@ -118,7 +118,7 @@ function limpar() {
 function analisar() {
 
     // Valida se lista esta vazia
-    if(!Number.isFinite(lista) || naoContemValores(lista)){
+    if(naoContemValores(lista)){
         alert("Adicione valores para serem analisados.")
         return;
     }
