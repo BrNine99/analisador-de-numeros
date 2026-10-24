@@ -5,7 +5,7 @@ SISTEMA DE ANALISE DE NUMEROS
 */
 
 // Cria a lista de armazenamento
-const lista = [];
+let lista = [];
 
 // Obter elementos pelo ID
 const obterElementos = (id) => document.getElementById(id);
@@ -68,3 +68,11 @@ function adicionar() {
 }
 
 
+// Função Limpar Lista
+function limpar() {
+    
+    lista.length = 0;
+    console.log("Lista atual:", lista);
+    
+    obterElementos("lista").textContent = "";
+}
