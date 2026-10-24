@@ -4,21 +4,34 @@ SISTEMA DE ANALISE DE NUMEROS
 ===============================
 */
 
-// Cria a lista de armazenamento
-let lista = [];
+// ===============================
+// CRIAR LISTA E FUNÇÃO AUXILIAR
+// ===============================
 
-// Obter elementos pelo ID
-const obterElementos = (id) => document.getElementById(id);
+// Lista de armazenamento
+let lista = [];
 
 // Funções auxiliares
 const limpaCampo = () =>{
     return obterElementos("numero").value = "";
 }
 
+// ==============================
+// OBTER ELEMENTOS E VALORES
+// ==============================
+
+// Obter elementos pelo ID
+const obterElementos = (id) => document.getElementById(id);
+
+
 // Obter numero usuário
 const numInit = () => {
     return parseFloat(obterElementos("numero").value);
 }
+
+// ============================
+// VALIDAÇÕES DE VALORES
+// ============================
 
 // Valida numero inteiro
 const ehInteiro = (valor) => {
@@ -36,6 +49,10 @@ const naoContemValores = (valor) => {
     return false;
 }
 
+// =============================
+// EXIBIR OS VALORES ADICIONADOS
+// =============================
+
 // Exibe lista
 const exibeLista = () => {
     let texto = "";
@@ -51,6 +68,10 @@ const exibeLista = () => {
     mensagem(texto.trim());   
     
 }
+
+// =============================
+// CRIAÇÃO DAS FUNÇÕES
+// =============================
 
 // Função adicionar
 function adicionar() {
